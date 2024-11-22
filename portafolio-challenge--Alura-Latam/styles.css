@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsla(215, 83%, 95%, 1);
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  gap: 2rem;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__nav ul > li:last-of-type {
+  font-weight: bold;
+}
+@media screen and (width <= 768px) {
+  .header__nav ul > li:not(:last-of-type) {
+    display: none;
+  }
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+.main {
+  padding: 6rem 0;
+}
+@media screen and (width <= 600px) {
+  .main {
+    padding: 3rem 0;
+  }
+}
+.main__body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (width <= 600px) {
+  .main__body {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+.main__body h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (width <= 768px) {
+  .main__body h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (width <= 600px) {
+  .main__body h1 {
+    font-size: 1.75rem;
+  }
+}
+.main__body p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media screen and (width <= 768px) {
+  .main__body p {
+    font-size: 1rem;
+  }
+}
+.main__right {
+  width: 25%;
+}
+.main__left {
+  width: 75%;
+}
+.main__left img {
+  width: 100%;
+}
+@media screen and (width <= 768px) {
+  .main__left {
+    width: 70%;
+  }
+  .main__right {
+    width: 30%;
+  }
+}
+@media screen and (width <= 600px) {
+  .main__left {
+    width: 100%;
+  }
+}
+.main__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.main__actions a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about {
+  padding: 4rem 0;
+  background-color: hsl(215, 83%, 95%);
+}
+.about h2 {
+  margin-bottom: 1.5rem;
+}
+.about p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+@media screen and (width <= 768px) {
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+@media screen and (width <= 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.skills, .hobbies {
+  padding: 4rem 0;
+}
+.skills h2, .hobbies h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.skills__cards, .hobbies__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+@media screen and (width <= 768px) {
+  .skills__cards, .hobbies__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (width <= 600px) {
+  .skills__cards, .hobbies__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skills__card, .hobbies__card {
+  background-color: white;
+  padding: 1rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.skills__card img, .hobbies__card img {
+  width: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.formation {
+  padding: 4rem 0;
+  background-color: var(--primary-color);
+}
+.formation h2 {
+  text-align: center;
+}
+.formation__cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media screen and (width <= 600px) {
+  .formation__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.formation__card {
+  display: grid;
+  gap: 1rem;
+}
+.formation__card img {
+  width: 100%;
+}
+
+.projects {
+  padding: 4rem 0;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.projects__item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.projects__item img {
+  width: 100%;
+}
+.projects__left {
+  width: 70%;
+}
+.projects__right {
+  width: 30%;
+}
+.projects__right h3 {
+  font-size: 1.5rem;
+}
+.projects__right p {
+  margin: 0.5rem 0 1rem;
+}
+@media screen and (width <= 768px) {
+  .projects__item {
+    flex-direction: column;
+  }
+  .projects__left {
+    width: 100%;
+  }
+  .projects__right {
+    width: 100%;
+  }
+}
+.projects__actions {
+  display: flex;
+  gap: 1rem;
+}
+.projects__actions button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid hsl(214, 78%, 53%);
+  color: hsl(214, 78%, 53%);
+}
+.projects__actions button:last-of-type {
+  background-color: hsl(214, 78%, 53%);
+  color: white;
+}
+
+.contact {
+  background-color: var(--primary-color);
+  padding: 4rem 0;
+}
+.contact__body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.contact__left {
+  width: 40%;
+}
+.contact__left img {
+  width: 100%;
+}
+.contact__right {
+  width: 60%;
+}
+.contact__right p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+@media screen and (width <= 768px) {
+  .contact__left {
+    display: none;
+  }
+  .contact__right {
+    width: 100%;
+  }
+  .contact__body {
+    flex-direction: column;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 0.875rem;
+  margin-top: 1rem;
+}
+.form__item {
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid hsl(0, 0%, 78%);
+}
+.form__item:hover {
+  border-color: hsl(214, 78%, 53%);
+}
+.form__item label {
+  font-size: 0.75rem;
+  color: rgb(189, 189, 189);
+}
+.form__item input, .form__item textarea {
+  width: 100%;
+  height: 28px;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+}
+.form__item input::-moz-placeholder, .form__item textarea::-moz-placeholder {
+  font-family: inherit;
+}
+.form__item input::placeholder, .form__item textarea::placeholder {
+  font-family: inherit;
+}
+.form__item textarea {
+  height: 100px;
+}
+.form input[type=submit] {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2rem;
+  background-color: hsl(214, 78%, 53%);
+  color: white;
+  border: 0;
+  outline: 0;
+  margin-top: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.form input[type=submit]:hover {
+  background-color: hsla(214, 78%, 53%, 0.8);
+}
+
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: white;
+}
